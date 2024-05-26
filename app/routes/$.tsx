@@ -42,6 +42,8 @@ export async function loader({ params }: LoaderFunctionArgs) {
         // If there is a match grab the provided route template and generate a new URL
         const to = generatePath(route.path, params);
 
+        console.log("REDIRECTING TO:", to)
+
         // Redirect to that URL with the given status code
         return new Response(null, {
           status: route.code ?? 301,
