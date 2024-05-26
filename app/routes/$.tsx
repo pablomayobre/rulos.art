@@ -1,8 +1,7 @@
 import { generatePath, matchPath } from "@remix-run/react";
 import { redirect } from "@vercel/remix";
-import { readFile } from "~/utils/fs.server";
 import { RedirectsSchema } from "~/schemas/redirects";
-import { parse as parseYaml } from "yaml";
+import redirectsFile from '../redirects.yaml'
 
 import type { Route } from "~/schemas/redirects";
 import type { LoaderFunctionArgs } from "@vercel/remix";
@@ -18,16 +17,8 @@ export async function loader({ params }: LoaderFunctionArgs) {
     });
   }
 
-  // Read redirects.yaml configuration file
-  const redirectsFile = await readFile(
-    process.env.NODE_ENV === "production"
-      ? __dirname + "/../redirects.yaml"
-      : "./app/redirects.yaml",
-    "utf-8"
-  );
-
   // Parse the redirect file and validate it
-  const redirects = RedirectsSchema.parse(parseYaml(redirectsFile));
+  const redirects = RedirectsSchema.parse(redirectsFile);
 
   // Find the first entry that matches the current URL
   for (let item of Object.entries(redirects)) {
