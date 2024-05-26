@@ -3,26 +3,26 @@
 ############################### DOCUMENTOS ###############################
 
 # Comisiones
-"\/terminosycondiciones":
+'/terminosycondiciones':
   {
-    path: "https:\/\/drive.google.com\/file\/d\/1mk-8N0VG8i_7DB0sKzLJHvyU4bQO-mb1\/view",
+    path: 'https://drive.google.com/file/d/1mk-8N0VG8i_7DB0sKzLJHvyU4bQO-mb1/view',
     code: 307,
   }
-"\/termsandconditions":
+'/termsandconditions':
   {
-    path: "https:\/\/drive.google.com\/file\/d\/1p_XAIDQRsTe2-h8z8tn8J7sroZfZZi8c\/view",
+    path: 'https://drive.google.com/file/d/1p_XAIDQRsTe2-h8z8tn8J7sroZfZZi8c/view',
     code: 307,
   }
 
 # CV / Resume
-"\/cv":
+'/cv':
   {
-    path: "https:\/\/www.figma.com\/proto\/M0EhdOb4sE4VTC7GlolgV0\/Curículum-Vitae---Sgarzini-Carla-Georgina?hide-ui=1",
+    path: 'https://www.figma.com/proto/M0EhdOb4sE4VTC7GlolgV0/Curículum-Vitae---Sgarzini-Carla-Georgina?hide-ui=1',
     code: 301,
   }
-"\/resume":
+'/resume':
   {
-    path: "https:\/\/www.figma.com\/proto\/M0EhdOb4sE4VTC7GlolgV0\/Curículum-Vitae---Sgarzini-Carla-Georgina?hide-ui=1",
+    path: 'https://www.figma.com/proto/M0EhdOb4sE4VTC7GlolgV0/Curículum-Vitae---Sgarzini-Carla-Georgina?hide-ui=1',
     code: 301,
   }
 
@@ -30,68 +30,68 @@
 ############################# REDES SOCIALES #############################
 
 # Instagram
-"\/ig": { path: "https:\/\/instagram.com\/rulos.artisticos", code: 307 }
-"\/instagram": { path: "https:\/\/instagram.com\/rulos.artisticos", code: 307 }
+'/ig': { path: 'https://instagram.com/rulos.artisticos', code: 307 }
+'/instagram': { path: 'https://instagram.com/rulos.artisticos', code: 307 }
 
 # Twitch
-"\/twitch": { path: "https:\/\/twitch.tv\/rulosartisticos", code: 307 }
-"\/twotch": { path: "https:\/\/twitch.tv\/rulosartisticos", code: 307 }
+'/twitch': { path: 'https://twitch.tv/rulosartisticos', code: 307 }
+'/twotch': { path: 'https://twitch.tv/rulosartisticos', code: 307 }
 
 # Discord
-"\/gg": { path: "https:\/\/discord.gg\/h6SR9MTgzj", code: 307 }
-"\/discord": { path: "https:\/\/discord.gg\/h6SR9MTgzj", code: 307 }
+'/gg': { path: 'https://discord.gg/h6SR9MTgzj', code: 307 }
+'/discord': { path: 'https://discord.gg/h6SR9MTgzj', code: 307 }
 
 # Tumblr
-"\/tumblr": { path: "https:\/\/rulosart.tumblr.com", code: 307 }
+'/tumblr': { path: 'https://rulosart.tumblr.com', code: 307 }
 
 
 ############################### PROYECTOS ################################
 
 # Celf
-"\/celf\/artista":
+'/celf/artista':
   {
-    path: "https:\/\/www.figma.com\/proto\/CCD50C89MuDmCSlb43S4SL\/UI-KIT-DISE%C3%91O-APLICADO?page-id=160%3A1060&node-id=742%3A8330&viewport=314%2C410%2C0.03&scaling=scale-down&starting-point-node-id=742%3A8330&show-proto-sidebar=1",
+    path: 'https://www.figma.com/proto/CCD50C89MuDmCSlb43S4SL/UI-KIT-DISE%C3%91O-APLICADO?page-id=160%3A1060&node-id=742%3A8330&viewport=314%2C410%2C0.03&scaling=scale-down&starting-point-node-id=742%3A8330&show-proto-sidebar=1',
     code: 307,
   }
-"\/celf\/cliente":
+'/celf/cliente':
   {
-    path: "https:\/\/www.figma.com\/proto\/CCD50C89MuDmCSlb43S4SL\/UI-KIT-DISE%C3%91O-APLICADO?page-id=160%3A1060&node-id=775%3A40048&viewport=314%2C410%2C0.03&scaling=scale-down&starting-point-node-id=775%3A40048&show-proto-sidebar=1",
+    path: 'https://www.figma.com/proto/CCD50C89MuDmCSlb43S4SL/UI-KIT-DISE%C3%91O-APLICADO?page-id=160%3A1060&node-id=775%3A40048&viewport=314%2C410%2C0.03&scaling=scale-down&starting-point-node-id=775%3A40048&show-proto-sidebar=1',
     code: 307,
   }
-"\/celf\/reporte":
+'/celf/reporte':
   {
-    path: "https:\/\/drive.google.com\/file\/d\/1SKf-V096j4MCRlURpYaMjW_-P_gmDqqO\/view?usp=sharinga",
+    path: 'https://drive.google.com/file/d/1SKf-V096j4MCRlURpYaMjW_-P_gmDqqO/view?usp=sharinga',
     code: 307,
   }
-"\/celf\/*":
+'/celf/*':
   {
-    path: "https:\/\/www.behance.net\/gallery\/148229983\/Celf-Organiza-tus-comisiones",
+    path: 'https://www.behance.net/gallery/148229983/Celf-Organiza-tus-comisiones',
     code: 307,
   }
-"\/celf":
+'/celf':
   {
-    path: "https:\/\/www.behance.net\/gallery\/148229983\/Celf-Organiza-tus-comisiones",
+    path: 'https://www.behance.net/gallery/148229983/Celf-Organiza-tus-comisiones',
     code: 307,
   }
 
 # Ecomundus
-"\/ecomundus\/*":
+'/ecomundus/*':
   {
-    path: "https:\/\/www.behance.net\/gallery\/139062951\/ECOMUNDUS-DEFENSORES-DEL-MANANA-PROY-DE-GRADUACION",
+    path: 'https://www.behance.net/gallery/139062951/ECOMUNDUS-DEFENSORES-DEL-MANANA-PROY-DE-GRADUACION',
     code: 307,
   }
-"\/ecomundus":
+'/ecomundus':
   {
-    path: "https:\/\/www.behance.net\/gallery\/139062951\/ECOMUNDUS-DEFENSORES-DEL-MANANA-PROY-DE-GRADUACION",
+    path: 'https://www.behance.net/gallery/139062951/ECOMUNDUS-DEFENSORES-DEL-MANANA-PROY-DE-GRADUACION',
     code: 307,
   }
 
 # Full Metal Alchemist Anniversary Box
-"\/fma-ar":
-  { path: "https:\/\/www.instagram.com\/ar\/693051135880081\/", code: 307 }
-"\/fma-wallpapers":
+'/fma-ar':
+  { path: 'https://www.instagram.com/ar/693051135880081/', code: 307 }
+'/fma-wallpapers':
   {
-    path: "https:\/\/drive.google.com\/drive\/u\/1\/folders\/1QS3s8UTy2N5GJOEXT0skaFrvQjhBz7KG",
+    path: 'https://drive.google.com/drive/u/1/folders/1QS3s8UTy2N5GJOEXT0skaFrvQjhBz7KG',
     code: 301,
   }
-"\/fma-stickers": { path: "https:\/\/sticker.ly\/s\/DXYEL4", code: 301 }
+'/fma-stickers': { path: 'https://sticker.ly/s/DXYEL4', code: 301 }

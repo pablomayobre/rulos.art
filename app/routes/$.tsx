@@ -1,7 +1,7 @@
 import { generatePath, matchPath } from "@remix-run/react";
 import { redirect } from "@vercel/remix";
 import { RedirectsSchema } from "~/schemas/redirects";
-import redirectsFile from '../redirects.yaml'
+import redirectsFile from "../redirects.yaml";
 
 import type { Route } from "~/schemas/redirects";
 import type { LoaderFunctionArgs } from "@vercel/remix";
@@ -43,7 +43,12 @@ export async function loader({ params }: LoaderFunctionArgs) {
         const to = generatePath(route.path, params);
 
         // Redirect to that URL with the given status code
-        return redirect(to, route.code ?? 301);
+        return new Response(null, {
+          status: route.code ?? 301,
+          headers: {
+            Location: to,
+          },
+        });
       } catch (e) {
         console.error(`Failed to match URL`);
         console.error(`URL: ${urlToMatch}`);
