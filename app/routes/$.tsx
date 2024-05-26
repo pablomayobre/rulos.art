@@ -38,11 +38,23 @@ export async function loader({ params }: LoaderFunctionArgs) {
         splat: match.params["*"],
       };
 
+      let protocol: string | null = null;
+
+      try {
+        protocol = new URL(route.path).protocol;
+        console.log(protocol);
+      } catch (e) {}
+
       try {
         // If there is a match grab the provided route template and generate a new URL
-        const to = generatePath(route.path, params);
+        let to = generatePath(
+          route.path,
+          params
+        );
 
-        console.log("REDIRECTING TO:", to)
+        if (protocol && route.path.startsWith(protocol + "//")) {
+          to = to.replace(protocol+'/', protocol+'//',)
+        }
 
         // Redirect to that URL with the given status code
         return new Response(null, {
