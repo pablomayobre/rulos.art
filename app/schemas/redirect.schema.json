@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "redirects.yaml",
+  "description": "This YAML file allows you to configure different redirects for URLs not addressed by your server.",
+  "type": "object",
+  "properties": {},
+  "additionalProperties": {
+    "title": "Match Pattern",
+    "description": "The URL pattern that needs to match.",
+    "oneOf": [
+      { "type": "string", "title": "URL Template", "description": "The URL template to redirect to." },
+      {
+        "title": "Route Object",
+        "description": "A more detailed way to define the redirect.",
+        "type": "object",
+        "required": ["path"],
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The URL pattern to redirect to."
+          },
+          "code": {
+            "title": "Redirect Status Code",
+            "type": "integer",
+            "description": "The status code to be used when redirecting.",
+            "enum": [301, 302, 303, 307, 308]
+          },
+          "defaults": {
+            "title": "Default Values",
+            "type": "object",
+            "description": "Values to use to fill in the URL pattern if the match didn't include them.",
+            "properties": {},
+            "additionalProperties": { "type": "string" }
+          }
+        }
+      }
+    ]
+  }
+}
