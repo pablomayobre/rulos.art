@@ -5,7 +5,7 @@ import {
   Scripts,
   ScrollRestoration,
   json,
-  useLoaderData,
+  useRouteLoaderData,
 } from "@remix-run/react";
 import { Analytics } from "@vercel/analytics/react";
 import type { LinksFunction, LoaderFunctionArgs } from "@vercel/remix";
@@ -13,11 +13,14 @@ import styles from "~/styles/tailwind.css?url";
 import { TooltipProvider } from "./components/ui/tooltip";
 import { useChangeLanguage } from "remix-i18next/react";
 import { useTranslation } from "react-i18next";
-import i18next from "~/i18next.server";
+import i18next, { localeCookie } from "~/i18next.server";
 
 export async function loader({ request }: LoaderFunctionArgs) {
-  let locale = await i18next.getLocale(request);
-  return json({ locale });
+  const locale = await i18next.getLocale(request);
+  return json(
+    { locale },
+    { headers: { "Set-Cookie": await localeCookie.serialize(locale) } }
+  );
 }
 
 export let handle = {
@@ -39,9 +42,32 @@ export const links: LinksFunction = () => [
   },
 ];
 
+export function Layout({ children }: { children: React.ReactNode }) {
+  const loaderData = useRouteLoaderData<typeof loader>("root");
+
+  return (
+    <html lang={loaderData?.locale ?? "en"}>
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <Meta />
+        <Links />
+      </head>
+      <body className="bg-background-pattern min-w-full min-h-screen">
+        {children}
+        <ScrollRestoration />
+        <Scripts />
+        <Analytics />
+      </body>
+    </html>
+  );
+}
+
 export default function App() {
   // Get the locale from the loader
-  let { locale } = useLoaderData<typeof loader>();
+  let { locale } = useRouteLoaderData<typeof loader>("root") ?? {
+    locale: "en",
+  };
 
   let { i18n } = useTranslation();
 
@@ -52,21 +78,8 @@ export default function App() {
   useChangeLanguage(locale);
 
   return (
-    <html lang={locale} dir={i18n.dir()}>
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <Meta />
-        <Links />
-      </head>
-      <body className="bg-background-pattern min-w-full min-h-screen">
-        <TooltipProvider>
-          <Outlet />
-        </TooltipProvider>
-        <ScrollRestoration />
-        <Scripts />
-        <Analytics />
-      </body>
-    </html>
+    <TooltipProvider>
+      <Outlet />
+    </TooltipProvider>
   );
 }
