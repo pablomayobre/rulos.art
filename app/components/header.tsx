@@ -1,4 +1,3 @@
-import { SiInstagram, SiX, SiBehance } from "@icons-pack/react-simple-icons";
 import {
   NavigationMenu,
   NavigationMenuList,
@@ -10,6 +9,10 @@ import { navigationMenuTriggerStyle } from "./ui/navigation-menu";
 import { Tooltip, TooltipTrigger, TooltipContent } from "./ui/tooltip";
 import { Link } from "@remix-run/react";
 import { useTranslation } from "react-i18next";
+
+import { default as SiInstagram } from "@icons-pack/react-simple-icons/icons/SiInstagram.mjs";
+import { default as SiX } from "@icons-pack/react-simple-icons/icons/SiX.mjs";
+import { default as SiBehance } from "@icons-pack/react-simple-icons/icons/SiBehance.mjs";
 
 export function Header() {
   let { t } = useTranslation();
@@ -54,7 +57,7 @@ export function Header() {
             <NavigationMenuItem>
               <Link to="/ig" title={t("ig")}>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  <SiInstagram title={t("ig")}/>
+                  <SiInstagram title={t("ig")} />
                   <span className="sr-only">{t("ig")}</span>
                 </NavigationMenuLink>
               </Link>
