@@ -2,10 +2,10 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -67,6 +67,10 @@ module.exports = {
           to: { height: "0" },
         },
       },
+      backgroundImage: {
+        "background-pattern":
+          "radial-gradient(at 80% 8%, hsla(267,64%,84%,1) 0px, transparent 50%), radial-gradient(at 54% 52%, hsla(224,100%,95%,1) 0px, transparent 50%), radial-gradient(at 3% 18%, hsla(171,62%,84%,1) 0px, transparent 50%), radial-gradient(at 46% 82%, hsla(296,69%,85%,1) 0px, transparent 50%);",
+      },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
@@ -74,4 +78,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};

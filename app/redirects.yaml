@@ -44,6 +44,10 @@
 # Tumblr
 '/tumblr': { path: 'https://rulosart.tumblr.com', code: 307 }
 
+# Behance
+'/be': {path: 'https://www.behance.net/carlasgarzini', code: 307}
+'/behance': {path: 'https://www.behance.net/carlasgarzini', code: 307}
+
 
 ############################### PROYECTOS ################################
 
