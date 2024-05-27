@@ -42,7 +42,6 @@ export async function loader({ params }: LoaderFunctionArgs) {
 
       try {
         protocol = new URL(route.path).protocol;
-        console.log(protocol);
       } catch (e) {}
 
       try {
