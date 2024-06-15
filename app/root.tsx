@@ -8,7 +8,11 @@ import {
   useRouteLoaderData,
 } from "@remix-run/react";
 import { Analytics } from "@vercel/analytics/react";
-import type { LinksFunction, LoaderFunctionArgs } from "@vercel/remix";
+import type {
+  LinksFunction,
+  LoaderFunctionArgs,
+  MetaFunction,
+} from "@vercel/remix";
 import styles from "~/styles/tailwind.css?url";
 import { TooltipProvider } from "./components/ui/tooltip";
 import { useChangeLanguage } from "remix-i18next/react";
@@ -19,7 +23,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
   const locale = await i18next.getLocale(request);
   return json(
     { locale },
-    { headers: { "Set-Cookie": await localeCookie.serialize(locale) } }
+    { headers: { "Set-Cookie": await localeCookie.serialize(locale) } },
   );
 }
 
@@ -31,8 +35,59 @@ export let handle = {
   i18n: "common",
 };
 
+export const meta: MetaFunction = () => [
+  { name: "msapplication-TileColor", content: "#f4a7ff" },
+  { name: "msapplication-TileImage", content: "/mstile-144x144.png" },
+  { name: "theme-color", content: "#f4d2f9" },
+  { property: "og:type", content: "website" },
+  { property: "og:title", content: "Rulos Artísticos" },
+  { property: "og:url", content: "https://rulos.art/" },
+  { property: "og:image", content: "" },
+  {
+    property: "og:description",
+    content: "Rulos Artísticos - Ilustración, Diseño y Papelería",
+  },
+  { name: "twitter:card", content: "summary_large_image" },
+  { property: "twitter:domain", content: "rulos.art" },
+  { property: "twitter:url", content: "https://rulos.art" },
+  { name: "twitter:title", content: "Rulos Artísticos" },
+  {
+    name: "twitter:description",
+    content: "Rulos Artísticos - Ilustración, Diseño y Papelería",
+  },
+  { name: "twitter:image", content: "" },
+];
+
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
+  { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
+  {
+    rel: "icon",
+    type: "image/png",
+    sizes: "32x32",
+    href: "/favicon-32x32.png",
+  },
+  {
+    rel: "icon",
+    type: "image/png",
+    sizes: "194x194",
+    href: "/favicon-194x194.png",
+  },
+  {
+    rel: "icon",
+    type: "image/png",
+    sizes: "192x192",
+    href: "/android-chrome-192x192.png",
+  },
+  {
+    rel: "icon",
+    type: "image/png",
+    sizes: "16x16",
+    href: "/favicon-16x16.png",
+  },
+  { rel: "manifest", href: "/site.webmanifest" },
+  { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#82368c" },
+
   { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
   { rel: "icon", type: "image/png", href: "/favicon.png" },
   {
@@ -53,7 +108,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="bg-background-pattern min-w-full min-h-screen">
+      <body className="min-h-screen min-w-full bg-background-pattern">
         {children}
         <ScrollRestoration />
         <Scripts />

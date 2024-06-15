@@ -18,26 +18,26 @@ export function Header() {
   let { t } = useTranslation();
 
   return (
-    <div className="bg-white/30 border-white/50 border-solid border backdrop-saturate-150 backdrop-blur-lg fixed top-0 left-0 right-0">
-      <div className="container w-full h-24 lg:h-32 flex mx-auto items-center justify-between">
+    <div className="fixed left-0 right-0 top-0 z-50 border border-solid border-white/50 bg-white/30 backdrop-blur-lg backdrop-saturate-150">
+      <div className="container mx-auto flex h-24 w-full items-center justify-between px-2  lg:h-32 lg:px-14">
         <Tooltip>
           <TooltipTrigger asChild>
             <header>
               <Link to="/" aria-label="Home">
                 <Logo
                   color="#82368C"
-                  className="w-auto h-16 md:hidden"
+                  className="h-16 w-auto drop-shadow-glow md:hidden"
                   aria-labelledby="title"
                 />
                 <Logo
                   color="#82368C"
-                  className="w-auto h-16 lg:h-24 hidden md:block"
+                  className="hidden h-16 w-auto drop-shadow-glow md:block lg:h-24"
                   aria-labelledby="title"
                   full
                 />
               </Link>
               <h1 className="sr-only" id="title">
-                Rulos Artísitcos
+                Rulos Artísticos
               </h1>
             </header>
           </TooltipTrigger>
@@ -46,35 +46,35 @@ export function Header() {
             align="start"
             collisionPadding={16}
             sideOffset={8}
-            className="py-3 px-5 rounded-full bg-white/70 border-white/50 border-solid border backdrop-saturate-150 backdrop-blur-lg text-md"
+            className="text-md rounded-full border border-solid border-white/50 bg-white/85 px-5 py-3 backdrop-blur-2xl backdrop-saturate-150"
           >
-            {t("logo-about")}
+            {t("logoAbout")}
           </TooltipContent>
         </Tooltip>
 
         <NavigationMenu>
-          <NavigationMenuList className="flex flex-row gap-1 sm:gap-4 ml-2">
+          <NavigationMenuList className="ml-2 flex flex-row gap-1 sm:gap-4">
             <NavigationMenuItem>
-              <Link to="/ig" title={t("ig")}>
+              <Link to="/ig" title={t("social.ig")}>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  <SiInstagram title={t("ig")} />
-                  <span className="sr-only">{t("ig")}</span>
+                  <SiInstagram title={t("social.ig")} />
+                  <span className="sr-only">{t("social.ig")}</span>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link to="/tw" title={t("x")}>
+              <Link to="/tw" title={t("social.x")}>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  <SiX title={t("x")} />
-                  <span className="sr-only">{t("x")}</span>
+                  <SiX title={t("social.x")} />
+                  <span className="sr-only">{t("social.x")}</span>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link to="/be" title={t("be")}>
+              <Link to="/be" title={t("social.be")}>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  <SiBehance title={t("be")} />
-                  <span className="sr-only">{t("be")}</span>
+                  <SiBehance title={t("social.be")} />
+                  <span className="sr-only">{t("social.be")}</span>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
