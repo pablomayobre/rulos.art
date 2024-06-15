@@ -21,7 +21,7 @@ export function Hero({ children }: { children: ReactNode }) {
   const [count, setCount] = useState(
     Array.isArray(children) ? children.length : 1,
   );
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (!api) {
@@ -46,18 +46,19 @@ export function Hero({ children }: { children: ReactNode }) {
     <Carousel
       className="group w-full"
       setApi={setApi}
-      plugins={
-        [
-          /*         Autoplay({
+      plugins={[
+        Autoplay({
           delay: 5000,
-        }), */
-        ]
-      }
+        }),
+      ]}
     >
       <CarouselContent>{children}</CarouselContent>
 
       <div className="flex items-center justify-center gap-10 pt-3">
-        <CarouselPrevious className="opacity-0 transition-opacity disabled:invisible group-hover:opacity-100 !lg:relative !lg:inset-0 !lg:transform-none"  aria-label={t("hero.prev")}/>
+        <CarouselPrevious
+          className="opacity-0 transition-opacity disabled:invisible group-hover:opacity-100 !lg:relative !lg:inset-0 !lg:transform-none"
+          aria-label={t("hero.prev")}
+        />
         {count > 1 ? (
           <ToggleGroup
             type="single"
@@ -95,7 +96,10 @@ export function Hero({ children }: { children: ReactNode }) {
               })}
           </ToggleGroup>
         ) : null}
-        <CarouselNext className="opacity-0 transition-opacity disabled:invisible group-hover:opacity-100 !lg:relative !lg:inset-0 !lg:transform-none" aria-label={t("hero.next")}/>
+        <CarouselNext
+          className="opacity-0 transition-opacity disabled:invisible group-hover:opacity-100 !lg:relative !lg:inset-0 !lg:transform-none"
+          aria-label={t("hero.next")}
+        />
       </div>
     </Carousel>
   );
@@ -133,13 +137,13 @@ export function HeroItem({
 }: HeroItemProps) {
   return (
     <CarouselItem>
-      <div className="p-1  h-full">
-        <Card className="border border-solid border-white/50 bg-white/40 backdrop-blur-lg backdrop-saturate-150 h-full">
+      <div className="h-full  p-1">
+        <Card className="h-full border border-solid border-white/50 bg-white/40 backdrop-blur-lg backdrop-saturate-150">
           <CardContent
             className={
               align === "left"
-                ? "h-full relative isolate overflow-hidden rounded-lg p-6 px-6 pt-16 sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0"
-                : "h-full relative isolate overflow-hidden rounded-lg p-6 px-6 pt-16 sm:px-16 md:pt-24 lg:flex lg:flex-row-reverse lg:gap-x-20 lg:px-24 lg:pt-0"
+                ? "relative isolate h-full overflow-hidden rounded-lg p-6 px-6 pt-16 sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0"
+                : "relative isolate h-full overflow-hidden rounded-lg p-6 px-6 pt-16 sm:px-16 md:pt-24 lg:flex lg:flex-row-reverse lg:gap-x-20 lg:px-24 lg:pt-0"
             }
           >
             <div className="relative z-10 mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
