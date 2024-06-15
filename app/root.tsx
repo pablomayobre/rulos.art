@@ -42,7 +42,7 @@ export const meta: MetaFunction = () => [
   { property: "og:type", content: "website" },
   { property: "og:title", content: "Rulos Artísticos" },
   { property: "og:url", content: "https://rulos.art/" },
-  { property: "og:image", content: "" },
+  { property: "og:image", content: "/og.png" },
   {
     property: "og:description",
     content: "Rulos Artísticos - Ilustración, Diseño y Papelería",
@@ -55,7 +55,7 @@ export const meta: MetaFunction = () => [
     name: "twitter:description",
     content: "Rulos Artísticos - Ilustración, Diseño y Papelería",
   },
-  { name: "twitter:image", content: "" },
+  { name: "twitter:image", content: "/twitter.png" },
 ];
 
 export const links: LinksFunction = () => [
@@ -92,8 +92,16 @@ export const links: LinksFunction = () => [
   { rel: "icon", type: "image/png", href: "/favicon.png" },
   {
     rel: "preconnect",
+    href: "https://fonts.googleapis.com",
+  },
+  {
+    rel: "preconnect",
     href: "https://fonts.gstatic.com",
     crossOrigin: "anonymous",
+  },
+  {
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap",
   },
 ];
 

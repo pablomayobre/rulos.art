@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -20,11 +20,91 @@ module.exports = {
     },
 
     extend: {
+      fontSize: {
+        "2xl": [
+          "2rem",
+          {
+            lineHeight: "2.6666666666666665rem",
+          },
+        ],
+        "3xl": [
+          "2.5rem",
+          {
+            lineHeight: "3rem",
+          },
+        ],
+        "4xl": [
+          "3rem",
+          {
+            lineHeight: "3.3333333333333335rem",
+          },
+        ],
+        "5xl": [
+          "4rem",
+          {
+            lineHeight: "4.3333333333333333rem",
+          },
+        ],
+        "6xl": [
+          "5rem",
+          {
+            lineHeight: "5.3333333333333333rem",
+          },
+        ],
+        "7xl": [
+          "6rem",
+          {
+            lineHeight: "6.3333333333333333rem",
+          },
+        ],
+        "8xl": [
+          "8rem",
+          {
+            lineHeight: "8.3333333333333333rem",
+          },
+        ],
+        "9xl": [
+          "10.666666666666666rem",
+          {
+            lineHeight: "10.3333333333333333rem",
+          },
+        ],
+        base: [
+          "1.3333333333333333rem",
+          {
+            lineHeight: "2rem",
+          },
+        ],
+        lg: [
+          "1.5rem",
+          {
+            lineHeight: "2.3333333333333335rem",
+          },
+        ],
+        sm: [
+          "1.1666666666666667rem",
+          {
+            lineHeight: "1.6666666666666667rem",
+          },
+        ],
+        xl: [
+          "1.6666666666666667rem",
+          {
+            lineHeight: "2.3333333333333335rem",
+          },
+        ],
+        xs: [
+          "1rem",
+          {
+            lineHeight: "1.3333333333333333rem",
+          },
+        ],
+      },
       screens: Object.keys(defaultTheme.screens).reduce((obj, key) => {
-        const [rawMin] = defaultTheme.screens[key].split('px')
-        const max = parseInt(rawMin) - 1
-        obj[`!${key}`] = { max: `${max}px` }
-        return obj
+        const [rawMin] = defaultTheme.screens[key].split("px");
+        const max = parseInt(rawMin) - 1;
+        obj[`!${key}`] = { max: `${max}px` };
+        return obj;
       }, {}),
       colors: {
         black: "hsl(var(--black))",
@@ -86,28 +166,25 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       dropShadow: {
-        "sm": "0 1px 1px hsla(var(--black) / 0.05)",
+        sm: "0 1px 1px hsla(var(--black) / 0.05)",
         "drop-shadow": [
           "0 1px 2px hsla(var(--black) / 0.1)",
           "0 1px 1px hsla(var(--black) / 0.06)",
         ],
-        "md": [
+        md: [
           "0 4px 3px hsla(var(--black) / 0.07)",
           "0 2px 2px hsla(var(--black) / 0.06)",
         ],
-        "lg": [
+        lg: [
           "0 10px 8px hsla(var(--black) / 0.04)",
           "0 4px 3px hsla(var(--black) / 0.1)",
         ],
-        "xl": [
+        xl: [
           "0 20px 13px hsla(var(--black) / 0.03)",
           "0 8px 5px hsla(var(--black) / 0.08)",
         ],
         "2xl": "0 25px 25px hsla(var(--black) / 0.15)",
-        "glow": [
-          "0px 0px 20px #FFFFFF",
-          "0px 0px 20px #FFFFFF",
-        ],
+        glow: ["0px 0px 20px #FFFFFF", "0px 0px 20px #FFFFFF"],
       },
     },
   },

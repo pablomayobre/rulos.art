@@ -192,12 +192,12 @@ export default function Index() {
         <div className="container mx-auto flex w-full flex-col items-center justify-center gap-2 px-2 py-2 lg:px-14">
           <p>{t("footer.copyright")}</p>
           <p>
-            {t("footer.madeWith")}
+            {t("footer.madeWith")}{" "}
             <Heart
               className="inline"
               size="1rem"
               aria-label={t("footer.love")}
-            />
+            />{" "}
             {t("footer.byPablo")}
           </p>
         </div>
