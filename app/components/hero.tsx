@@ -84,6 +84,7 @@ export function Hero({ children }: { children: ReactNode }) {
               .map((_, index) => {
                 return (
                   <ToggleGroupItem
+                    key={index}
                     value={(index + 1).toString()}
                     className="h-10 w-10 rounded-full"
                   >

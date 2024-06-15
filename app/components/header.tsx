@@ -55,28 +55,37 @@ export function Header() {
         <NavigationMenu>
           <NavigationMenuList className="ml-2 flex flex-row gap-1 sm:gap-4">
             <NavigationMenuItem>
-              <Link to="/ig" title={t("social.ig")}>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              <NavigationMenuLink
+                className={navigationMenuTriggerStyle()}
+                asChild
+              >
+                <Link to="/ig" title={t("social.ig")}>
                   <SiInstagram title={t("social.ig")} />
                   <span className="sr-only">{t("social.ig")}</span>
-                </NavigationMenuLink>
-              </Link>
+                </Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link to="/tw" title={t("social.x")}>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              <NavigationMenuLink
+                className={navigationMenuTriggerStyle()}
+                asChild
+              >
+                <Link to="/tw" title={t("social.x")}>
                   <SiX title={t("social.x")} />
                   <span className="sr-only">{t("social.x")}</span>
-                </NavigationMenuLink>
-              </Link>
+                </Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link to="/be" title={t("social.be")}>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              <NavigationMenuLink
+                className={navigationMenuTriggerStyle()}
+                asChild
+              >
+                <Link to="/be" title={t("social.be")}>
                   <SiBehance title={t("social.be")} />
                   <span className="sr-only">{t("social.be")}</span>
-                </NavigationMenuLink>
-              </Link>
+                </Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
