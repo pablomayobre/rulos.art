@@ -151,7 +151,7 @@ export default function Index() {
           </Button>
         </div>
         <div className="mt-8 w-full">
-          <h2 className="text-3xl">Recommended</h2>
+          <h2 className="text-3xl">{t("recommended.title")}</h2>
           <Separator className="my-4 bg-gray-300" />
           <div className="max-w- grid grid-cols-1 grid-rows-1 gap-6 lg:grid-cols-2">
             <RecommendedCard

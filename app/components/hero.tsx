@@ -44,7 +44,7 @@ export function Hero({ children }: { children: ReactNode }) {
 
   return (
     <Carousel
-      className="group w-full"
+      className="max-h-[calc(100vh - 13rem)] group w-full"
       setApi={setApi}
       plugins={[
         Autoplay({
@@ -52,7 +52,7 @@ export function Hero({ children }: { children: ReactNode }) {
         }),
       ]}
     >
-      <CarouselContent>{children}</CarouselContent>
+      <CarouselContent className="h-full">{children}</CarouselContent>
 
       <div className="flex items-center justify-center gap-10 pt-3">
         <CarouselPrevious
@@ -137,20 +137,19 @@ export function HeroItem({
 }: HeroItemProps) {
   return (
     <CarouselItem>
-      <div className="h-full  p-1">
+      <div className="p-1 h-full">
         <Card className="h-full border border-solid border-white/50 bg-white/40 backdrop-blur-lg backdrop-saturate-150">
           <CardContent
-            className={
-              align === "left"
-                ? "relative isolate h-full overflow-hidden rounded-lg p-6 px-6 pt-16 sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0"
-                : "relative isolate h-full overflow-hidden rounded-lg p-6 px-6 pt-16 sm:px-16 md:pt-24 lg:flex lg:flex-row-reverse lg:gap-x-20 lg:px-24 lg:pt-0"
-            }
+            className={cn(
+              "flex-col lg:gap-x-20 relative isolate flex h-full min-h-[min(calc(100vh-13rem),30rem)] overflow-hidden rounded-lg p-6 sm:px-16 sm:pt-16 md:min-h-0 md:pt-24 lg:px-24 lg:pt-0",
+              align === "left" ? "lg:flex-row" : "lg:flex-row-reverse",
+            )}
           >
-            <div className="relative z-10 mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-secondary-foreground sm:text-4xl">
+            <div className="relative z-10 mx-auto max-w-xl shrink-0 grow items-stretch text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
+              <h2 className="text-lg font-bold tracking-tight text-secondary-foreground sm:text-xl md:text-3xl">
                 {title}
               </h2>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
+              <p className="sm:text-md mt-6 text-sm text-gray-600 md:text-lg md:leading-8">
                 {description}
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
@@ -167,7 +166,7 @@ export function HeroItem({
                 ) : null}
               </div>
             </div>
-            <div className="relative mt-16 min-h-80 shrink-0 grow lg:mt-8">
+            <div className="relative mt-16 h-full shrink-0 grow sm:h-[initial] md:min-h-80 lg:mt-8">
               <img
                 className={cn(
                   align === "left"

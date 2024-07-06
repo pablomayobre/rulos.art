@@ -20,85 +20,85 @@ module.exports = {
     },
 
     extend: {
-      fontSize: {
+      "fontSize": {
         "2xl": [
-          "2rem",
+          "1.7142857142857142rem",
           {
-            lineHeight: "2.6666666666666665rem",
-          },
+            "lineHeight": "2.2857142857142856rem"
+          }
         ],
         "3xl": [
-          "2.5rem",
+          "2.142857142857143rem",
           {
-            lineHeight: "3rem",
-          },
+            "lineHeight": "2.5714285714285716rem"
+          }
         ],
         "4xl": [
-          "3rem",
+          "2.5714285714285716rem",
           {
-            lineHeight: "3.3333333333333335rem",
-          },
+            "lineHeight": "2.857142857142857rem"
+          }
         ],
         "5xl": [
-          "4rem",
+          "3.4285714285714284rem",
           {
-            lineHeight: "4.3333333333333333rem",
-          },
+            "lineHeight": "3.1428571428571428rem"
+          }
         ],
         "6xl": [
-          "5rem",
+          "4.285714285714286rem",
           {
-            lineHeight: "5.3333333333333333rem",
-          },
+            "lineHeight": "4.1428571428571428rem"
+          }
         ],
         "7xl": [
-          "6rem",
+          "5.142857142857143rem",
           {
-            lineHeight: "6.3333333333333333rem",
-          },
+            "lineHeight": "5.1428571428571428rem"
+          }
         ],
         "8xl": [
-          "8rem",
+          "6.857142857142857rem",
           {
-            lineHeight: "8.3333333333333333rem",
-          },
+            "lineHeight": "6.1428571428571428rem"
+          }
         ],
         "9xl": [
-          "10.666666666666666rem",
+          "9.142857142857142rem",
           {
-            lineHeight: "10.3333333333333333rem",
-          },
+            "lineHeight": "9.1428571428571428rem"
+          }
         ],
-        base: [
-          "1.3333333333333333rem",
+        "base": [
+          "1.1428571428571428rem",
           {
-            lineHeight: "2rem",
-          },
+            "lineHeight": "1.7142857142857142rem"
+          }
         ],
-        lg: [
-          "1.5rem",
+        "lg": [
+          "1.2857142857142858rem",
           {
-            lineHeight: "2.3333333333333335rem",
-          },
+            "lineHeight": "2rem"
+          }
         ],
-        sm: [
-          "1.1666666666666667rem",
-          {
-            lineHeight: "1.6666666666666667rem",
-          },
-        ],
-        xl: [
-          "1.6666666666666667rem",
-          {
-            lineHeight: "2.3333333333333335rem",
-          },
-        ],
-        xs: [
+        "sm": [
           "1rem",
           {
-            lineHeight: "1.3333333333333333rem",
-          },
+            "lineHeight": "1.4285714285714286rem"
+          }
         ],
+        "xl": [
+          "1.4285714285714286rem",
+          {
+            "lineHeight": "2rem"
+          }
+        ],
+        "xs": [
+          "0.8571428571428571rem",
+          {
+            "lineHeight": "1.1428571428571428rem"
+          }
+        ]
       },
       screens: Object.keys(defaultTheme.screens).reduce((obj, key) => {
         const [rawMin] = defaultTheme.screens[key].split("px");

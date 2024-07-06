@@ -64,4 +64,35 @@ export default {
       image: "Drawing of Rulos Artisticos",
     },
   },
+
+    fma: {
+    title: "Full Metal Alchemist - Anniversary Box",
+
+    hero: {
+      title: "Thanks for your purchase!",
+      description: "We hope you'll enjoy the content of this box but also this included digital resources."
+    },
+
+    ar: {
+      title: "Augmented Reality",
+      description:
+        "Alchemy is at your grasp, reach out to it and transmute with the power of augmented reality. But be careful, you may find the truth."
+    },
+
+    wallpapers: {
+      title: "Wallpapers",
+      description: "Nothing like good company, we hope these wallpapers will follow you on your adventures. Use them in your phone or computer."
+    },
+
+    stickers: {
+      title: "Stickers",
+      description:
+        "Expressing our emotions is hard for all of us, but specially for Edward Elric. We hope these WhatsApp stickers will help you do it." 
+    },
+
+    terms: {
+      title: "Terms of use",
+      description:
+        "All the images and digital resources are provided for non-commercial use only. The images and resources may only be used by those that purchased the physical product. Selling and reproduction is strictly forbidden." 
+    },
 };

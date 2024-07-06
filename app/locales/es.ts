@@ -63,4 +63,38 @@ export default {
       image: "Ilustración de Rulos Artisticos",
     },
   },
+
+  fma: {
+    title: "Full Metal Alchemist - Anniversary Box",
+
+    hero: {
+      title: "Gracias por tu compra!",
+      description:
+        "Esperamos que disfrutes de los productos incluidos en la caja asi como tambien de estos recursos digitales.",
+    },
+
+    ar: {
+      title: "Realidad Aumentada",
+      description:
+        "La alquimia está al alcance de tus manos, transmuta tu caja con el poder de la realidad aumentada. Pero tené cuidado, o podrías conocer la verdad.",
+    },
+
+    wallpapers: {
+      title: "Fondos de Pantalla",
+      description:
+        "No hay nada como una buena compañía, esperamos que estos wallpapers te acompañen en todas tus aventuras. Usalos en tu celular o computadora.",
+    },
+
+    stickers: {
+      title: "Stickers",
+      description:
+        "A todos nos cuesta expresar lo que pensamos, en especial a Edward Elric, pero esperemos que estos stickers de WhatsApp te ayuden en tu día a día.",
+    },
+
+    terms: {
+      title: "Terminos de uso",
+      description:
+        "Todas las imagenes y recursos son para uso digital, sin fines de lucro. Las imagenes y recursos pueden ser usadas solo por aquellas personas que hayan adquirido el producto fisico. Su venta y reproducción se encuentra totalmente prohibida.",
+    },
+  },
 };

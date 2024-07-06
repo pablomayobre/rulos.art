@@ -116,7 +116,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="min-h-screen min-w-full bg-background-pattern">
+      <body className="min-h-screen min-w-full flex flex-col bg-background-pattern">
         {children}
         <ScrollRestoration />
         <Scripts />

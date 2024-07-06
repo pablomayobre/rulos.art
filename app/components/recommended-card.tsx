@@ -16,7 +16,7 @@ export default function RecommendedCard({
   children?: ReactNode;
 }) {
   return (
-    <Card className="flex flex-col items-start border border-solid border-white/50 bg-white/40 backdrop-blur-lg backdrop-saturate-150 sm:flex-row-reverse">
+    <Card className="flex flex-col items-start justify-between border border-solid border-white/50 bg-white/40 backdrop-blur-lg backdrop-saturate-150 sm:flex-row-reverse">
       <img
         src={image.src}
         width={image.width}
